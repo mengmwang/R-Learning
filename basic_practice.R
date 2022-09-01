@@ -179,3 +179,29 @@ for (i in l){
   }
   print(i)
 }
+
+print_hello <- function(){
+  print("Hello")
+}
+print_hello()
+
+print_helloname <- function(name){
+  print(paste("Hello", name))
+}
+print_helloname("abc")
+
+print_helloname <- function(name="Guest"){
+  print(paste("Hello", name))
+}
+print_helloname("abc")
+print_helloname()
+
+times10 <- function(x){
+  return(10*x)
+}
+times10(10)
+times10(5)
+
+print(times10(10))
+print(times10(3))
+
