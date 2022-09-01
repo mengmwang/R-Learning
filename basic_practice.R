@@ -1,5 +1,6 @@
 # This is my first R script 
 # Some basic lines, for practice purposes
+# Code adapted from w3schools R tutorial
 
 a <- 5
 b <- 5
