@@ -38,3 +38,84 @@ num4 <- as.complex(ii)
 num4
 class(num4)
 
+5+5
+5-1
+5*4
+
+abs(1.54)
+abs(1+5i)
+
+sqrt(15)
+sqrt(-5)
+
+ceiling(1.2)
+floor(1.85)
+
+str <- "This is the test string"
+str
+
+strl <- "This is the long test string,
+the string is long long long,
+long long."
+strl
+cat(strl)
+
+nchar(str)
+nchar(strl)
+
+grepl("This", str)
+grepl("this", str)
+grepl("this", str, ignore.case = TRUE)
+grepl("my", str)
+
+str1 <- "Good"
+str2 <- "Morning"
+paste(str1, str2)
+
+str3 <- "A&B"
+str4 <- "A \" B"
+str4
+cat(str4)
+
+str5 <- "A\tB"
+cat(str5)
+
+100 < 99
+100 == 99
+100 > 99
+100 >= 99
+
+a1 <- 100
+a2 <- 99
+a1 >= a2
+
+a1 + a2
+a1 - a2
+a1 * a2
+a1 / a2
+a1 ^ a2
+a1 %% a2
+a1 %/% a2
+
+5 %/% 2
+
+aa <- 30
+aa <<- 30
+30 -> aa
+30 ->> aa
+
+10 >= 9 & 8 < 9
+10 >= 9 && 8 < 9
+
+x <- 1:10
+2 %in% x
+11 %in% x
+
+mat1 <- matrix(1:9, nrow=3)
+mat1
+
+mat2 <- matrix(1:9, nrow=3, byrow=TRUE)
+mat2
+
+mat1 %*% mat2
+mat1 * mat2
