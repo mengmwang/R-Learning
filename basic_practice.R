@@ -119,3 +119,63 @@ mat2
 
 mat1 %*% mat2
 mat1 * mat2
+
+if (a1 < a2){
+  print("a1 is smaller than a2")
+}else if (a1 > a2){
+  print("a1 is bigger than a2")
+}else{
+  print("a1 is equal to a2")
+}
+
+i <- 1
+while (i < 10){
+  print(i)
+  i <- i+1
+}
+
+i <- 1
+while (i < 10){
+  print(i)
+  i <- i+1
+  if (i==6){
+    break
+    }
+}
+
+i <- 0
+while (i < 10){
+  i <- i+1
+  if (i==6){
+    next
+  }
+  print(i)
+}
+
+for (i in 1:5){
+  print(i)
+}
+
+for (i in list("A","B","C")){
+  print(i)
+}
+
+a = c(1, 2, 3, 4, 5, 6)
+
+5 %in% a
+
+l <- list("A","B","C","D")
+for (i in l){
+  if (i == "B"){
+    break
+  }
+  print(i)
+}
+
+l <- list("A","B","C","D")
+for (i in l){
+  if (i == "B"){
+    next
+  }
+  print(i)
+}
