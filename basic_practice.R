@@ -206,3 +206,59 @@ times10(5)
 print(times10(10))
 print(times10(3))
 
+# vector
+
+a <- c(1,2,3)
+b <- c(1,5,6)
+c <- c('A','B','D')
+d <- 1:10
+e <- 1.5:3.5
+f <- 1.5:3
+length(a)
+length(d)
+
+sort(c)
+
+a[1] # start from 1
+c[c(1,3)]
+c[-1] # - indicate exception, except the first one
+c[1] <- "C"
+c[-1] <- "F"
+c[3] <- "B"
+
+g <- rep(a, each=3)
+h <- rep(a, times=3)
+j <- rep(a, times=c(3,2,1))
+k <- rep(a, times=c(3,2,0))
+
+l <- seq(0,10,2)
+m <- seq(from=1, to=11, by=1.5)
+
+# list
+
+n <- list("A","B","F","D")
+n
+n[1]
+n[1] <- "BB"
+length(n)
+
+"BB" %in% n
+"CC" %in% n
+
+n
+o <- append(n,"N")
+p <- append(o, "ABC", after=2)
+q <- p[-3] # remove an item
+
+q[2:4]
+
+for (x in q){
+  print(x)
+}
+
+r <- c(p,q)
+s <- c(p,a)
+
+# matrices
+
+?rep
