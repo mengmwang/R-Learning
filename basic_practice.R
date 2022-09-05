@@ -262,3 +262,38 @@ s <- c(p,a)
 # matrices
 
 ?rep
+
+mat <- matrix(c(1:6), nrow=3,ncol=2)
+mat <- matrix(c(1:6), nrow=3, ncol=2, byrow = TRUE)
+mat[1,1]
+mat[2,1]
+mat[3,]
+mat[,1]
+mat[c(1,2),]
+
+mat1 <- cbind(mat, c(5,6,7)) # add row/column
+mat2 <- rbind(mat, c(2,5))
+
+mat3 <- mat1[-c(1),-c(1)]
+mat3 <- mat1[-1,-1]
+
+10 %in% mat
+2 %in% mat
+
+dim(mat)
+dim(mat1)
+length(mat)
+length(mat1)
+
+nrow(mat)
+ncol(mat)
+
+for (i in 1:nrow(mat)){
+  for (j in 1:ncol(mat)){
+    print(mat[i,j])
+  }
+}
+
+mat4 <- rbind(mat,mat2)
+mat5 <- cbind(mat, mat1)
+
