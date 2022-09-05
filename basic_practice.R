@@ -297,3 +297,44 @@ for (i in 1:nrow(mat)){
 mat4 <- rbind(mat,mat2)
 mat5 <- cbind(mat, mat1)
 
+# data frame
+
+df <- data.frame(
+  id = c("A","C","B"), # use = instead of <-
+  n = c(10,5,8)
+)
+df
+print(df)
+
+summary(df)
+
+df[1]
+df[[1]]
+df["id"]
+df[["id"]]
+df$id
+df$n
+
+df1 <- rbind(df, c("D",11))
+df1
+
+df2 <- cbind(df, comp = c((1+1i), (2+3i), (10+2i)))
+df2
+
+df3 <- df2[-c(1),-c(1)]
+df3
+
+dim(df2)
+dim(df3)
+
+ncol(df1)
+nrow(df2)
+length(df1) # number of columns
+
+df4 <- rbind(df1, df1)
+df4
+
+df5 <- cbind(df,df2)
+df5
+
+df6 <- cbind(df1,df2) # return error, don't match
