@@ -338,3 +338,24 @@ df5 <- cbind(df,df2)
 df5
 
 df6 <- cbind(df1,df2) # return error, don't match
+
+# factors
+
+f <- factor(c("A","B","A","C","A"))
+levels(f)
+
+f1 <- factor(c(100,1,2,5,100))
+f1
+
+f2 <- factor(c("A","B","A","C","A"), levels=c("A","B","C","D","E"))
+f2
+
+length(f2)
+f2[1]
+f2[5]
+f2[5] <- "D"
+f2
+f2[5] <- "F" # error, can't assign
+f2
+f2[5] <- "E"
+f2
