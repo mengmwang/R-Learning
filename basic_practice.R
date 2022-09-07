@@ -359,3 +359,50 @@ f2[5] <- "F" # error, can't assign
 f2
 f2[5] <- "E"
 f2
+
+# plot
+
+plot(1,1)
+plot(c(1:10),c(11:20))
+plot(c(1,5),c(2,8))
+
+x <- c(1,1,3,4,7)
+y <- c(2,3,4,6,10)
+plot(x,y)
+
+plot(1:10)
+plot(1:10, type='l')
+plot(1:10, type='b')
+plot(1:10, type='s')
+plot(1:10, type='h')
+plot(1:10, type="l", main="Title", xlab = "X", ylab = "Y")
+plot(1:10, type='l', col="red")
+plot(1:10, type='b', col="azure2")
+plot(1:10, col="azure2", cex=3)
+plot(1:10, col="blue", cex=2, pch=11)
+plot(1:10, type='l', lwd=2)
+plot(1:10, type='l', lwd=2, lty=4)
+
+plot(1:10, type="l", col="red")
+lines(3:5, type="b",col="blue", lwd=2)
+
+plot(1:10)
+points(5:50, col="blue")
+
+plot(5:50, col="blue")
+points(1:10)
+
+pie(1:5)
+pie(c(30,30,40))
+pie(c(30,30,40), init.angle = 45)
+pie(c(30,30,40), init.angle = 90) 
+
+pie(c(30,30,40), init.angle = 90, labels = c("A","B","C"), main="Title") 
+pie(c(30,30,40), init.angle = 90, labels = c("A","B","C"), main="Title", col = c("white","red","blue"))
+legend("bottomright", legend=c("A","B","C"), fill=c("white","red","blue"))
+
+barplot(c(1:4), names.arg = c("A","B","C","D"))
+barplot(c(1:4), names.arg = c("A","B","C","D"), density=30)
+barplot(c(1:4), names.arg = c("A","B","C","D"), width = c(1,1,2,2))
+barplot(c(1:4), names.arg = c("A","B","C","D"), horiz = TRUE)
+
