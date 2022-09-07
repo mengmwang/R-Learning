@@ -406,3 +406,39 @@ barplot(c(1:4), names.arg = c("A","B","C","D"), density=30)
 barplot(c(1:4), names.arg = c("A","B","C","D"), width = c(1,1,2,2))
 barplot(c(1:4), names.arg = c("A","B","C","D"), horiz = TRUE)
 
+# statistics
+
+mtcars
+?mtcars
+
+iris
+?iris
+
+ir <- iris
+dim(ir)
+length(ir)
+names(ir)
+rownames(ir)
+
+ir$Sepal.Length
+sort(ir$Sepal.Length)
+summary(ir)
+
+min(ir$Petal.Width)
+max(ir$Petal.Width)
+
+which.min(ir$Petal.Width)
+which.max(ir$Petal.Width)
+rownames(ir)[which.max(ir$Petal.Width)]
+
+mean(ir$Petal.Length)
+median(ir$Petal.Length)
+
+sort(table(ir$Sepal.Length),decreasing = TRUE)[1]
+names(sort(table(ir$Sepal.Length),decreasing = TRUE))[1]
+names(sort(table(ir$Petal.Width),decreasing = TRUE))[1]
+
+quantile(ir$Sepal.Length)
+quantile(ir$Sepal.Length, 0.75)
+quantile(ir$Sepal.Length, c(0.1,0.2,0.75))
+
