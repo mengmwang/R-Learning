@@ -1,6 +1,8 @@
 # This file contains the code I used in learning R 101 on cognitiveclass.ai
 # basic R code lines
 
+# Math Variables and Strings
+
 139+121
 260/60
 4^2
@@ -25,6 +27,8 @@ total_hr
 
 movie <- "Toy Story"  # or 'Toy Story'
 movie
+
+# Vectors and Factors
 
 c(81,125)/60
 
@@ -52,3 +56,52 @@ movielength_vector <- c("Very short","Short","Medium","Short","Long","Very short
 movielength_factor <- factor(movielength_vector, ordered=TRUE, levels=c("Very short","Short","Medium","Long","Very long"))
 movielength_factor
 summary(movielength_factor)
+
+# Vector Operations
+
+year <- c(1985,1999,2010,2002)
+names(year) <- c("The Breakfact Club","American Beauty","Black Swan","Chicago")
+year["Black Swan"]
+
+length(year)
+year_sorted <- sort(year)
+year_sorted
+
+min(year)
+max(year)
+which.min(year)
+
+cost_2014 <- c(8.6,8.5,8.1)
+sum(cost_2014)/3
+sum(cost_2014)/length(cost_2014)
+mean(cost_2014)
+summary(cost_2014)
+
+cost_2014[2]
+cost_2014[c(2,3)]
+cost_2014[1:3]
+
+titles <- c("Black Swan","Casino","City of God","Jumanji","Toy Story")
+titles[-1]
+titles[8]
+
+cost_2014 > 8.3
+cost_2014[cost_2014 > 8.3]
+
+age_restric <- c(14,12,10,NA,18,NA)
+age_restric
+
+age_restriction <- c(14,16,12,10,18,18)
+sequences <- c(2,3,0,2,6,3)
+
+multiply <- age_restriction * sequences
+multiply
+
+cost_2014 * 10
+
+head(age_restriction, n=2)
+tail(age_restric, n=3)
+
+is.na(age_restric)
+!is.na(NA)
+!is.na(2)
