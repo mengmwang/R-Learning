@@ -105,3 +105,6 @@ tail(age_restric, n=3)
 is.na(age_restric)
 !is.na(NA)
 !is.na(2)
+
+# Arrays and Matrices
+
