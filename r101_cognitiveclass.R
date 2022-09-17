@@ -303,3 +303,109 @@ tryCatch(as.integer("A"), warning = function(e)
   print("Some warnings."))
 
 # Reading CSV, Excel, and Built-in Datasets
+
+read.csv("movie-db.csv")
+
+install.packages("readxl")
+library(readxl)
+read_excel("movie-db.xls")
+
+my_data <- read.csv("C:\\Users\\mengmengw\\Downloads\\movies-db.csv")
+my_data
+
+my_data["name"]
+my_data[1,]
+my_data[1, c("name","length_min")]
+my_data$name
+
+data()
+help(co2)
+co2
+
+# Reading Text (.txt) files in R
+
+text <- readLines("toy_story.txt")
+length(text)
+nchar(text)
+
+file.size("toy_story.txt")
+text <- scan("toy_story","")
+
+m <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+write(m, file="matrix.txt", ncolumns=3, sep=" ")
+
+write.csv(df, file="dataset.csv", row.names=FALSE)
+write.table(df, file="dataset.csv", row.names=FALSE, col.names=FALSE, sep=",")
+
+install.packages("xlsx")
+library(xlsx)
+
+# String Operations in R
+
+summary <- readLines("C:\\Users\\mengmengw\\Downloads\\The_Artist.txt")
+summary
+
+length(summary)
+file.size("C:\\Users\\mengmengw\\Downloads\\The_Artist.txt")
+
+data1 <- scan("C:\\Users\\mengmengw\\Downloads\\The_Artist.txt","")
+data1
+
+nchar(summary[1])
+toupper(summary[1])
+tolower(summary[1])
+chartr(" ", "-", summary[1])
+char_list <- strsplit(summary[1], " ")
+char_list
+word_list <- unlist(char_list)
+word_list
+
+sorted_list <- sort(word_list)
+sorted_list
+paste(sorted_list, collapse = " ")
+
+sub_string <- substr(summary[1], start=4, stop=50)
+sub_string
+
+trimws(sub_string)
+
+install.packages("stringr")
+library(stringr)
+str_sub(summary[1], -8, -1)
+
+# The Date Format in R
+
+as.Date("27/06/94","%d/%m/%y")
+as.Date("1994/06/27") - as.Date("1959/01/01")
+as.Date("1994/06/27") > as.Date("1959/01/01")
+as.Date("1994/06/27") - 15
+
+Sys.Date()
+date()
+Sys.time()
+
+weekdays(Sys.Date())
+months(Sys.Date())
+quarters(Sys.Date())
+
+julian(Sys.Date())
+
+seq(Sys.Date(), by="month",length.out=4)
+
+# Regular Expressions in R
+
+grep("@.*", c("test@testing.com","not an email","test2@testing.com"))
+
+grep("@.*", c("test@testing.com","not an email","test2@testing.com"), value = TRUE)
+
+gsub("@.*", "@newdomain.com", c("test@testing.com","not an email","test2@testing.com"))
+
+matches <- regexpr("@.*", c("test@testing.com","not an email","test2@testing.com"))
+regmatches(c("test@testing.com","not an email","test2@testing.com"), matches)
+
+email_df <- read.csv("https://ibm.box.com/shared/static/cbim8daa5vjf5rf4rlz11330lvqbu7rk.csv")
+email_df
+
+matches <- regexpr("@.*\\.", email_df[,"Email"])
+email_df[,"Domain"] = regmatches(email_df[,"Email"], matches)
+email_df
