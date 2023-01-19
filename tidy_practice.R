@@ -1,3 +1,6 @@
+# practice tidyverse library
+# pipe operator
+
 install.packages("tidyverse")
 library(tidyverse)
 data()
