@@ -24,3 +24,29 @@ view(data2)
 # use compare() from waldo library
 library(waldo)
 compare(names(data1), names(data2))
+
+# mtcars dataset
+mtcats <- mtcats
+class(mtcars)
+head(mtcars,10)
+dim(mtcars)
+names(mtcars)
+colnames(mtcars)
+rolnames(mtcars)
+as.matrix(mtcars)
+mtcars1 <- as.matrix(mtcars)
+class(mtcars1)
+mtcars2 <- t(mtcars1)
+
+iris <- iris
+iris[1:5,]
+iris[1:5,c(2,4)]
+iris["Sepal.Width",c(2,4)]
+iris["60",c(2,4)]
+iris[c("60","100"),c(2,4)]
+iris[c(60,100),c(2,4)]
+
+which(iris$Sepal.Length==5.7)
+iris[which(iris$Sepal.Length==5.7)]
+iris[which(iris$Sepal.Length %in% 5.7)]
+
