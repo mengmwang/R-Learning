@@ -50,3 +50,11 @@ which(iris$Sepal.Length==5.7)
 iris[which(iris$Sepal.Length==5.7)]
 iris[which(iris$Sepal.Length %in% 5.7)]
 
+# merge two dataframes
+# merge will remove the labels
+merge(x, y, by.x="a", by.y="b")
+# instead, use dplyr full_join to keep the labels 
+library(dplyr)
+full_join(x, y, by = joinby("a" == "b"))
+
+
