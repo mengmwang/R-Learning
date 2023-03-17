@@ -54,7 +54,12 @@ iris[which(iris$Sepal.Length %in% 5.7)]
 # merge will remove the labels
 merge(x, y, by.x="a", by.y="b")
 # instead, use dplyr full_join to keep the labels 
+# also there's inner_join, left_join and right_join
 library(dplyr)
 full_join(x, y, by = joinby("a" == "b"))
+
+# anti_join, find the difference in two tibbles
+anti_join(x, y, by = joinby("a" == "b"))
+
 
 
