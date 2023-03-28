@@ -61,5 +61,9 @@ full_join(x, y, by = joinby("a" == "b"))
 # anti_join, find the difference in two tibbles
 anti_join(x, y, by = joinby("a" == "b"))
 
+# apply function on multiple columns
+mtcars <- mtcars %>%
+  mutate(across(everything(), as.integer, .names = "{.col}_num"))
+
 
 
